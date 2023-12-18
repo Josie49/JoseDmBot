@@ -16,4 +16,7 @@ async def on_message(message):
     if message.content.lower().startswith("hi"):
         await message.channel.send("hewwo")
 
+    if "69" in message.content:
+        await message.channel.send("nice")
+
 client.run(os.environ["BOT_TOKEN_JOSE"])
