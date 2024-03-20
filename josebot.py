@@ -23,6 +23,6 @@ async def on_message_edit(before, after):
     if before.author == client.user:
         return
     else:
-        await before.channel.sent("I saw that " + before.author + ".\n You said: " + before.content)
+        await before.channel.send("I saw that " + before.author + ".\n You said: " + before.content)
 
 client.run(os.environ["BOT_TOKEN_JOSE"])
