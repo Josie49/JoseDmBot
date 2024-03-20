@@ -19,4 +19,10 @@ async def on_message(message):
     if "69" in message.content:
         await message.channel.send("nice")
 
+async def on_message_edit(before, after):
+    if before.author == client.user:
+        return
+    else:
+        await before.channel.sent("I saw that " + before.author + ".\n You said: " + before.content)
+
 client.run(os.environ["BOT_TOKEN_JOSE"])
