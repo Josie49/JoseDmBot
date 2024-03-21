@@ -21,10 +21,7 @@ async def on_message(message):
 
 @client.event
 async def on_message_edit(before, after):
-    if before.author == client.user:
-        return
-    else:
-        msg = before.author + "edited their message:\n" + before.content + "->" + after.content
-        await before.channel.send(msg)
+    msg = before.author + "edited their message:\n" + before.content + "->" + after.content
+    await before.channel.send(msg)
 
 client.run(os.environ["BOT_TOKEN_JOSE"])
